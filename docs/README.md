@@ -44,7 +44,18 @@ grep 'http' out/normalized.csv
 jq '.' out/normalized.json
 ```
 
-## Métodos de validación
-- Verificar formato CSV: campos separados por coma
-- Validar deduplicación: líneas únicas
-- Validar JSON: campos clave presentes
+
+## Checklist de entrega Sprint 1
+
+- [x] Scripts Bash robustos en `src/` (`extract.sh`, `normalize.sh`)
+- [x] Pruebas Bats funcionales en `tests/` (`extract.bats`, `normalize.bats`)
+- [x] Makefile con targets obligatorios y reglas patrón
+- [x] Documentación clara en `docs/README.md` y `docs/contrato-salidas.md`
+- [x] Suite de pruebas pasando con `make test`
+- [x] Archivos generados en `out/` (`logs.csv`, `normalized.csv`, `normalized.json`)
+- [x] Bitácora de sprint (si aplica)
+- [x] Commit descriptivo en español
+
+## Notas sobre pruebas automatizadas
+
+Las pruebas Bats simulan la entrada `logs.csv` para validar la normalización y deduplicación, independientemente de los datos reales del sistema. El flujo principal del proyecto utiliza los datos extraídos por `extract.sh`.
