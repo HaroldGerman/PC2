@@ -17,7 +17,7 @@ if ! command -v journalctl &>/dev/null; then
 fi
 
 # Extracción y normalización
-journalctl -o json -q -n 100 $JQL_FILTER |
+journalctl -o json -q -n 50 $JQL_FILTER |
   jq -r '[.["__REALTIME_TIMESTAMP"], .["_SYSTEMD_UNIT"], .["_PID"], .["PRIORITY"], .["MESSAGE"]] | @csv' | \sort -u > "$OUT_FILE"
 
 echo "Logs extraídos y normalizados en $OUT_FILE"
