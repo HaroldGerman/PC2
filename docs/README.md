@@ -54,7 +54,8 @@ jq '.' out/normalized.json
 - [x] Suite de pruebas pasando con `make test`
 - [x] Archivos generados en `out/` (`logs.csv`, `normalized.csv`, `normalized.json`)
 - [x] Bitácora de sprint (si aplica)
-- [x] Enlace del video: [text](https://www.youtube.com/watch?v=o9rlOxEPTeM)
+- [x] Enlace del video Sprint 1: [text](https://www.youtube.com/watch?v=o9rlOxEPTeM)
+- [x] Enlace del video del proyecto terminado: [text](https://youtu.be/wGAnIkIO08Y) 
 - [x] Commit descriptivo en español
 
 ## Notas sobre pruebas automatizadas
