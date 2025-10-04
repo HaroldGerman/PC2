@@ -32,3 +32,10 @@ teardown() {
   [ "$status" -eq 1 ]
   [[ "$output" == *"No existe"* ]]
 }
+
+@test "Idempotencia: correr dos veces no cambia la salida" {
+  run bash src/normalize.sh
+  cp out/normalized.csv out/tmp.csv
+  run bash src/normalize.sh
+  diff out/normalized.csv out/tmp.csv
+}
